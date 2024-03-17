@@ -855,11 +855,12 @@ ol {
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   position: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-open {
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -1128,9 +1129,15 @@ ol {
     height: 100%;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     background-color: #ffffff;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  .backdrop-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    }
   .modal-menu-window {
     position: relative;
     height: 100%;
@@ -1169,6 +1176,7 @@ ol {
   }
   
   .modal-contact-data {
+    font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
